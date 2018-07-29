@@ -7,8 +7,10 @@ jdk:
 
 
 
+
+
 script:
-  - mvn clean cobertura:cobertura -Dtest=BatchChunkPartitionTest#testBatchChunkPartition -DfailIfNoTests=false
+  - mvn clean cobertura:cobertura -Dtest=BatchChunkMapperTest#testBatchChunkMapper -DfailIfNoTests=false
 
 before_deploy:
 - tar -zcvf coverage-result.tar.gz /home/travis/build/leusonmario/javaee7-samples/target/site/cobertura
