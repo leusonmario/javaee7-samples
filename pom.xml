@@ -393,6 +393,7 @@
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
+<testFailureIgnore>true</testFailureIgnore>
                             <classpathDependencyExcludes>
                                 <classpathDependencyExcludes>org.jboss.arquillian.spock:arquillian-spock-container</classpathDependencyExcludes>
                             </classpathDependencyExcludes>
@@ -1572,6 +1573,17 @@
               <aggregate>true</aggregate>
           </configuration>
          </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -1581,6 +1593,17 @@
                     <version>${plugin.enforcer.version}</version>
                 </plugin>
             <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
@@ -3817,6 +3840,17 @@
               <aggregate>true</aggregate>
           </configuration>
          </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
         </plugins>
     </reporting>
 
@@ -4005,6 +4039,7 @@
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
+<testFailureIgnore>true</testFailureIgnore>
                             <systemPropertyVariables>
                                 <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                                 <arquillian.launch>wildfly</arquillian.launch>
@@ -4015,6 +4050,17 @@
                         </configuration>
                     </plugin>
                 <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
@@ -5311,6 +5357,7 @@
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
 <testFailureIgnore>true</testFailureIgnore>
+<testFailureIgnore>true</testFailureIgnore>
                             <environmentVariables>
                                 <JBOSS_HOME>${project.build.directory}/wildfly-${org.wildfly}</JBOSS_HOME>
                             </environmentVariables>
@@ -5320,6 +5367,17 @@
                         </configuration>
                     </plugin>
                 <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
@@ -6707,6 +6765,17 @@
                         </executions>
                     </plugin>
                 <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>cobertura-maven-plugin</artifactId>
+          <version>2.7</version>
+          <configuration>
+              <format>xml</format>
+              <maxmem>256m</maxmem>
+              <!-- aggregated reports for multi-module projects -->
+              <aggregate>true</aggregate>
+          </configuration>
+         </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>cobertura-maven-plugin</artifactId>
           <version>2.7</version>
