@@ -63,8 +63,10 @@ jdk:
 
 
 
+
+
 script:
-  - mvn clean cobertura:cobertura -Dtest=79#048 -DfailIfNoTests=false
+  - mvn clean cobertura:cobertura -Dtest=java#AssertionError -DfailIfNoTests=false
 
 before_deploy:
 - tar -zcvf coverage-result.tar.gz /home/travis/build/leusonmario/javaee7-samples/target/site/cobertura
