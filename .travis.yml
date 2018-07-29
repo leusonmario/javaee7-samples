@@ -181,8 +181,10 @@ jdk:
 
 
 
+
+
 script:
-  - mvn clean cobertura:cobertura -Dtest=MyChunkListener#class -DfailIfNoTests=false
+  - mvn clean cobertura:cobertura -Dtest=MyOutputRecord#class -DfailIfNoTests=false
 
 before_deploy:
 - tar -zcvf coverage-result.tar.gz /home/travis/build/leusonmario/javaee7-samples/target/site/cobertura
