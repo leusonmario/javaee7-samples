@@ -79,8 +79,10 @@ jdk:
 
 
 
+
+
 script:
-  - mvn clean cobertura:cobertura -Dtest=e9537a0fa98c#war -DfailIfNoTests=false
+  - mvn clean cobertura:cobertura -Dtest=BatchTestHelper#class -DfailIfNoTests=false
 
 before_deploy:
 - tar -zcvf coverage-result.tar.gz /home/travis/build/leusonmario/javaee7-samples/target/site/cobertura
