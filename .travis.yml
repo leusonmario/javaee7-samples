@@ -1,0 +1,25 @@
+
+sudo: required
+language: java
+
+jdk:
+  - oraclejdk8
+
+script:
+  - mvn clean cobertura:cobertura -Dtest=BatchChunkMapperTest#testBatchChunkMapper -DfailIfNoTests=false
+
+before_deploy:
+- tar -zcvf coverage-result.tar.gz /home/travis/build/leusonmario/javaee7-samples/target/site/cobertura
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "u6shas9QXICHl6GPSHM1QL4wF90+ElzGVFIBefPvPqzJfmv1qdBBHXenc+HP58kjsMv8vP8oqjTcUlSSV/5GfOZQbw6RYiKR/x4vvpDlZ5kvDfQ4hbgdE4P8ZYUP9axbwoROeQugAqXMDoVmVmXq6qrVeGUnvRWi3FISIZ3kJqqC/zwM+Eh8nc4QyMaHEBpNCGE5MM38h/g57La6ezxk3MmZcy/iBj2z4YzfCIedv6P07SS9RNZySYtAzfeb/8yVX2FUNYN7PA0nYg5l61pn/oHGOaTgW3FO+pXi7fgHr+zIxenbZQ2LUNKG4E5CXWy51toPMP5ZOj2tWWN2FYMS7DAUTHaHoQ4vmcg3o+G3MA1RYsAZkraxGdTPaaOAdkrPh0pkNHxWxyqAK4ZfSoAQ4wYx4Ku+TmQ9uTiAZBFcIPXEKr9ufomJPEd6u7oGRptpLsNI+cBVSJt78XPoP9fdbYlVvSu5CcQ+d1FQEVEd4+KkYcFCrixY/EHpyk0nHHVnOYot59KlQz244BJ+gglirk0rw/5yQmtChIzK70MZobC4Y2u2v+przo28miOJ0YJPsTcD8ZHQco70PLfFUPpZAITC8aQk1rJgVk2hiw4LRdpKP3kmNyOPfKh0zHf4M409QyM7agYk8XA0U+z77/0C1UCvWdt/tQIu9fdhP2kPtWY="
+
+
+  file: coverage-result.tar.gz
+  file_glob: true
+  overwrite: true
+  skip_cleanup: true
+  on:
+    tags: true
